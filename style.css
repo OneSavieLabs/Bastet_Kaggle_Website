@@ -309,6 +309,7 @@ section:nth-child(even) {
 
 .esp-icon {
     width: 500px;
+    max-width: 90vw;
 }
 
 h2 {
