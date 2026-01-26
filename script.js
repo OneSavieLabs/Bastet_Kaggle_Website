@@ -118,3 +118,101 @@ function handlePawPrints() {
 
 // 頁面載入完成後初始化腳印動畫
 window.addEventListener('DOMContentLoaded', handlePawPrints);
+
+// ========================================
+// 浮动通知订阅框功能
+// ========================================
+// Google 表单配置
+const GOOGLE_FORM_CONFIG = {
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSf2sDcHE_le1BbWMnOXNHPvcw-X6ehZU-bW5vdkeXozR8I0VA/formResponse',
+    emailEntryId: 'entry.1600260525'
+};
+
+// 初始化订阅框
+window.addEventListener('DOMContentLoaded', () => {
+    const notifyTrigger = document.getElementById('notifyTrigger');
+    const notifyModal = document.getElementById('notifyModal');
+    const closeNotify = document.getElementById('closeNotify');
+    const notifyForm = document.getElementById('notifyForm');
+    const emailInput = document.getElementById('emailInput');
+    
+    // 時間檢測：記錄表單打開時間
+    let formOpenTime = null;
+    
+    // 打开订阅框
+    notifyTrigger.addEventListener('click', () => {
+        notifyModal.classList.add('active');
+        formOpenTime = Date.now(); // 記錄打開時間
+    });
+    
+    // 关闭订阅框
+    closeNotify.addEventListener('click', () => {
+        notifyModal.classList.remove('active');
+        formOpenTime = null; // 重置時間
+    });
+    
+    // 点击背景关闭
+    notifyModal.addEventListener('click', (e) => {
+        if (e.target === notifyModal) {
+            notifyModal.classList.remove('active');
+            formOpenTime = null; // 重置時間
+        }
+    });
+    
+    // 表單提交處理
+    notifyForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // 時間檢測：檢查是否太快提交（至少1秒，防止機器人但不影響複製貼上）
+        const timeSpent = Date.now() - formOpenTime;
+        if (timeSpent < 1000) {
+            const warningMsg = currentLang === 'zh' ? 
+                '請花點時間閱讀後再提交 🐱' : 
+                'Please take a moment to read before submitting 🐱';
+            alert(warningMsg);
+            return;
+        }
+        
+        const email = emailInput.value;
+        const submitButton = notifyForm.querySelector('.notify-submit');
+        const originalText = submitButton.textContent;
+        
+        // 顯示加載
+        submitButton.textContent = currentLang === 'zh' ? '提交中...' : 'Submitting...';
+        submitButton.disabled = true;
+        
+        try {
+            // 準備資料
+            const formData = new FormData();
+            formData.append(GOOGLE_FORM_CONFIG.emailEntryId, email);
+            
+            // 提交表单
+            await fetch(GOOGLE_FORM_CONFIG.url, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+            
+            // 顯示成功
+            const modalContent = document.querySelector('.notify-modal-content');
+            const successMessage = currentLang === 'zh' ? 
+                '<div class="notify-success"><h3>訂閱成功！</h3><p>我們會在比賽開始時通知您 😺</p></div>' :
+                '<div class="notify-success"><h3>Successfully Subscribed!</h3><p>We\'ll notify you when the competition begins 😺</p></div>';
+            
+            modalContent.innerHTML = successMessage;
+            
+            // 3秒後關閉重置
+            setTimeout(() => {
+                notifyModal.classList.remove('active');
+                location.reload();
+            }, 3000);
+            
+        } catch (error) {
+            console.error('Error:', error);
+            const errorMsg = currentLang === 'zh' ? '提交失败，请稍后再试' : 'Submission failed, please try again';
+            alert(errorMsg);
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
+    });
+});

@@ -125,7 +125,10 @@
         <div class="container">
             <h2 data-zh="聯絡我們" data-en="Contact Us">聯絡我們</h2>
             <div class="contact-content">
-                 <h3 class="bastet-title" data-zh="比賽連結: 尚未開放 " data-en="Competition Link: Coming Soon">比賽連結: 尚未開放</h3>
+                <div class="competition-link-section">
+                    <h3 class="bastet-title" data-zh="比賽連結:" data-en="Competition Link:">比賽連結:</h3>
+                    <button id="notifyTrigger" class="notify-trigger-inline" data-zh="🏁 開賽通知" data-en="🔔 Notify me at launch">Notify me at launch</button>
+                </div>
                 <p class="update-notice" data-zh="我們正緊鑼密鼓的為比賽做準備，比賽的詳細資訊會陸續更新，敬請期待！ 😺" data-en="We are working hard to prepare for the competition. More details will be unveiled soon. Stay tuned!!😺">我們正緊鑼密鼓的為比賽做準備，比賽的詳細資訊會陸續更新，敬請期待！</p>
                 <p class="contact-link-text">
                     <a href="https://onesavie.com/" target="_blank" class="contact-inline-link" data-zh="歡迎與我們聯繫" data-en="Feel Free to Get in Touch">歡迎與我們聯繫</a>
@@ -150,6 +153,30 @@
     <footer>
         <p data-zh="&copy; 2026 Bastet. All rights reserved." data-en="&copy; 2026 Bastet, All rights reserved.">&copy; 2026 Bastet. All rights reserved.</p>
     </footer>
+
+    
+    <div id="notifyModal" class="notify-modal">
+        <div class="notify-modal-content">
+            <button class="notify-close" id="closeNotify">&times;</button>
+            <div class="notify-header">
+                <h3 data-zh="芭斯特想通知您！" data-en="Get Notified by Bastet!">Get Notified by Bastet!</h3>
+            </div>
+            <p class="notify-description" data-zh="當比賽正式開始時，我們會發送郵件通知您" data-en="We'll email you when the competition officially begins">We'll email you when the competition officially begins</p>
+            <form id="notifyForm" class="notify-form">
+                <input 
+                    type="email" 
+                    id="emailInput" 
+                    class="notify-input" 
+                    placeholder="your.email@example.com"
+                    data-zh-placeholder="您的電子郵件"
+                    data-en-placeholder="your.email@example.com"
+                    required
+                >
+                <button type="submit" class="notify-submit" data-zh="通知我" data-en="Notify Me">Notify Me</button>
+            </form>
+            <p class="notify-privacy" data-zh="我們尊重您的隱私，絕不會分享您的資訊" data-en="We respect your privacy and will never share your information">We respect your privacy and will never share your information</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

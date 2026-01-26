@@ -46,7 +46,7 @@ header {
 .cat-peek-decoration {
     position: absolute;
     top: -21px;
-    left: 20px;
+    left: -40px;
     z-index: 999;
     pointer-events: none;
 }
@@ -605,6 +605,25 @@ h2 {
     letter-spacing: 0.1em;
 }
 
+/* Competition Link 區域 - 標題與按鈕橫向排列 */
+.competition-link-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.competition-link-section .bastet-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.competition-link-section .notify-trigger-inline {
+    margin: 0;
+}
+
 .bastet-links {
     display: flex;
     justify-content: center;
@@ -934,5 +953,282 @@ footer {
     .bastet-link {
         font-size: 1rem;
         padding: 0.8rem 1rem;
+    }
+}
+
+/* 内联通知按钮 (放在 Competition Link 下方) */
+.notify-trigger-inline {
+    display: inline-block;
+    margin: 25px 0;
+    background: linear-gradient(135deg, #ee66ff, #cc66dd);
+    color: #fff;
+    border: 2px solid #dd66ee;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(221, 102, 238, 0.5), 0 0 10px rgba(204, 102, 221, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    font-family: 'Courier New', Consolas, monospace;
+    text-align: center;
+}
+
+.notify-trigger-inline:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 30px rgba(221, 102, 238, 0.7), 0 0 20px rgba(204, 102, 221, 0.5);
+    background: linear-gradient(135deg, #ff77ff, #dd77ee);
+}
+
+/* 保留原浮动按钮样式（已不使用） */
+.notify-trigger {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #ee66ff, #cc66dd);
+    color: #fff;
+    border: 2px solid #dd66ee;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 99999;
+    box-shadow: 0 4px 20px rgba(221, 102, 238, 0.5), 0 0 10px rgba(204, 102, 221, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    font-family: 'Courier New', Consolas, monospace;
+}
+
+.notify-trigger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(221, 102, 238, 0.7), 0 0 20px rgba(204, 102, 221, 0.5);
+    background: linear-gradient(135deg, #ff77ff, #dd77ee);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(221, 102, 238, 0.5), 0 0 10px rgba(204, 102, 221, 0.3);
+    }
+    50% {
+        box-shadow: 0 6px 30px rgba(221, 102, 238, 0.7), 0 0 15px rgba(204, 102, 221, 0.5);
+    }
+}
+
+.notify-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.notify-modal.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.notify-modal-content {
+    background: #1a1a1a;
+    border: 3px solid #dd66ee;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(221, 102, 238, 0.35), 0 0 30px rgba(204, 102, 221, 0.2);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.notify-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #dd66ee;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.notify-close:hover {
+    color: #ff6666;
+    transform: rotate(90deg);
+}
+
+.notify-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.notify-cat-icon {
+    width: 80px;
+    height: auto;
+    max-height: none;
+    margin-bottom: 15px;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(221, 102, 238, 0.5)) drop-shadow(0 0 6px rgba(204, 102, 221, 0.3));
+}
+
+.notify-header h3 {
+    color: #ee66ff;
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 0 0 8px rgba(238, 102, 255, 0.3), 0 0 4px rgba(204, 102, 221, 0.2);
+    font-family: 'Courier New', Consolas, monospace;
+}
+
+.notify-description {
+    color: #ffbbee;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.notify-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.notify-input {
+    background: rgba(221, 102, 238, 0.08);
+    border: 2px solid #aa55bb;
+    border-radius: 10px;
+    padding: 15px;
+    color: #ee99ff;
+    font-size: 1rem;
+    font-family: 'Courier New', Consolas, monospace;
+    transition: all 0.3s ease;
+}
+
+.notify-input:focus {
+    outline: none;
+    background: rgba(221, 102, 238, 0.12);
+    border-color: #dd66ee;
+    box-shadow: 0 0 15px rgba(221, 102, 238, 0.35), 0 0 8px rgba(204, 102, 221, 0.2);
+}
+
+.notify-input::placeholder {
+    color: rgba(238, 153, 255, 0.5);
+}
+
+.notify-submit {
+    background: linear-gradient(135deg, #ee66ff, #cc66dd);
+    color: #fff;
+    border: 2px solid #dd66ee;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', Consolas, monospace;
+}
+
+.notify-submit:hover {
+    background: linear-gradient(135deg, #ff77ff, #dd77ee);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(221, 102, 238, 0.5), 0 0 15px rgba(204, 102, 221, 0.3);
+}
+
+.notify-submit:active {
+    transform: translateY(0);
+}
+
+.notify-privacy {
+    color: rgba(200, 200, 200, 0.6);
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.notify-success {
+    text-align: center;
+    padding: 20px;
+}
+
+.notify-success h3 {
+    color: #ee66ff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 12px rgba(238, 102, 255, 0.6);
+}
+
+.notify-success p {
+    color: #ffbbee;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .notify-trigger-inline {
+        padding: 14px 30px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 20px auto;
+    }
+    
+    .notify-trigger {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .notify-modal-content {
+        padding: 30px 20px;
+    }
+    
+    .notify-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .notify-cat-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .notify-trigger-inline {
+        padding: 12px 25px;
+        font-size: 0.95rem;
     }
 }
