@@ -288,6 +288,22 @@ section:nth-child(even) {
     margin: 0;
 }
 
+.knowledge-partner-group {
+    margin-top: 2rem;
+}
+
+.supporters-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.supporters-logos .supporter-icon {
+    width: 180px;
+}
+
 .supporter-title {
     font-size: 2.5rem;
     color: #00ff00;
