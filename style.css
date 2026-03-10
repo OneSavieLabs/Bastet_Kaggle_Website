@@ -1,3 +1,8 @@
+/* 讓 GCC logo 更大 */
+.gcc-icon {
+    width: 250px !important;
+    height: auto;
+}
 * {
     margin: 0;
     padding: 0;
