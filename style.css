@@ -1,6 +1,6 @@
-/* 讓 GCC logo 更大 */
+
 .gcc-icon {
-    width: 250px !important;
+    width: 200px !important;
     height: auto;
 }
 * {
