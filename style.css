@@ -281,15 +281,17 @@ section:nth-child(even) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     gap: 0;
 }
 
 .supporter-group {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 0;
 }
 
