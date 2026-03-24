@@ -343,6 +343,9 @@ section:nth-child(even) {
 .supporter-group:last-child .supporter-title {
     font-size: 1.8rem;
 }
+.media-partner-group .supporter-title {
+    font-size: 3.5rem;
+}
 
 h2 {
     font-size: 2.5rem;
