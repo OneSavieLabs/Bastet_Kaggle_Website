@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCC Prize Rules - Bastet Kaggle Competition</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "v9bqrgb0ro");
+    </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCT51GGSFN"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KCT51GGSFN');
+        </script>
+    <style>
+        .prize-rules-section {
+            padding: 5rem 0;
+            min-height: auto;
+        }
+
+        .prize-rules-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .back-link {
+            color: #00ffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+
+        .prize-rules-title {
+            font-size: 3.5rem;
+            color: #00ffff;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            text-align: center;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .prize-rules-subtitle {
+            text-align: center;
+            color: #00ff00;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .rule-section {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .rule-section:hover {
+            border-color: #00ffff;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .rule-section h3 {
+            font-size: 2.2rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .prize-table {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-collapse: collapse;
+        }
+
+        .prize-table tr {
+            border-bottom: 1px solid #00ff00;
+        }
+
+        .prize-table td, .prize-table th {
+            padding: 1.2rem;
+            text-align: left;
+            color: #00ff00;
+            font-size: 1.15rem;
+        }
+
+        .prize-table th {
+            background: rgba(0, 255, 0, 0.1);
+            color: #00ffff;
+            font-weight: bold;
+            text-shadow: none;
+        }
+
+        .prize-amount {
+            color: #00ffff;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
+        }
+
+        .rule-subsection {
+            margin: 2rem 0;
+        }
+
+        .rule-subsection h4 {
+            font-size: 1.6rem;
+            color: #00ff00;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.4);
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+
+        .rule-content {
+            color: #00ff00;
+            line-height: 1.9;
+            font-size: 1.25rem;
+            margin-left: 1rem;
+        }
+
+        .rule-content ul {
+            margin: 1rem 0 1rem 2rem;
+            list-style: none;
+        }
+
+        .rule-content li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .rule-content li:before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: rgba(0, 255, 0, 0.05);
+            border-left: 4px solid #00ffff;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box p {
+            color: #00ffff;
+            font-style: italic;
+            text-shadow: none;
+            font-size: 1.15rem;
+        }
+
+        .step-list {
+            margin: 1rem 0;
+            padding-left: 0;
+        }
+
+        .step-list li {
+            margin: 1rem 0;
+            font-size: 1.15rem;
+        }
+
+        .disclaimer {
+            color: #ff6b6b;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .link-text {
+            color: #00ffff;
+            text-decoration: underline;
+        }
+
+        a {
+            color: #00ffff;
+            text-shadow: none;
+        }
+
+        a:hover {
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+
+        section#prizes {
+            padding: 5rem 0;
+            min-height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cat-peek-decoration">
+            <img src="images/cat_peek.png" alt="Bastet Cat">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home" data-zh="首頁" data-en="Home">首頁</a></li>
+                <li><a href="index.html#about" data-zh="關於比賽" data-en="About">關於比賽</a></li>
+                <li><a href="index.html#services" data-zh="賽前準備" data-en="Guide">賽前準備</a></li>
+                <li><a href="prize-rules.html" data-zh="獎勵規則" data-en="Prize Rules">獎勵規則</a></li>
+                <li><a href="index.html#contact" data-zh="聯絡" data-en="Contact">聯絡</a></li>
+            </ul>
+            <button id="langToggle" class="lang-toggle">EN</button>
+        </nav>
+    </header>
+
+    <section id="prizes" class="prize-rules-section">
+        <div class="prize-rules-container">
+            <h1 class="prize-rules-title">GCC (GLOBAL CHINESE COMMUNITY)</h1>
+            <p class="prize-rules-subtitle">Mandarin Regional Prize Rules</p>
+
+            <!-- Prize Pool Section -->
+            <div class="rule-section">
+                <h3>1. Prize Pool & Distribution</h3>
+                <div class="rule-content">
+                    <p>In addition to the Global Prizes, a special <strong>Mandarin Regional Incentive</strong> of <strong>4,000 USDT</strong> has been established by our sponsors to reward top talent from the Mandarin-speaking community:</p>
+                    
+                    <table class="prize-table">
+                        <tr>
+                            <th>Prize Tier</th>
+                            <th>Award Amount</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Regional 1st Place</strong></td>
+                            <td class="prize-amount">2,000 USDT</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Regional 2nd Place</strong></td>
+                            <td class="prize-amount">1,000 USDT</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Regional 3rd Place</strong></td>
+                            <td class="prize-amount">1,000 USDT</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Note:</strong> This incentive is <strong>stackable</strong>. If a qualified participant/team also wins a Global Prize, they are eligible to receive both the Global and Regional awards.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eligibility Section -->
+            <div class="rule-section">
+                <h3>2. Eligibility Criteria</h3>
+                <div class="rule-content">
+                    <p>To qualify for the Regional Incentive, at least one core member of the participant/team must meet one of the following criteria:</p>
+                    
+                    <ul class="step-list">
+                        <li><strong>Residency:</strong> Currently residing in Taiwan, Mainland China, Hong Kong, Macau, or other overseas Mandarin-speaking communities.</li>
+                        
+                        <li><strong>Affiliation:</strong> Currently enrolled in or employed by an academic institution, Web3 laboratory, or corporation within the aforementioned regions.</li>
+                    </ul>
+
+                    <p style="margin-top: 1.5rem;">The Regional Incentive is awarded per team, not per individual. The prize amount remains fixed regardless of the number of qualifying members within a team.</p>
+                </div>
+            </div>
+
+            <!-- Verification SOP Section -->
+            <div class="rule-section">
+                <h3>3. Verification SOP (Know Your Competitor)</h3>
+                
+                <div class="rule-subsection">
+                    <h4>Step 1: Pre-registration (By June 15, 2026)</h4>
+                    <div class="rule-content">
+                        <p>Participants must register their Kaggle ID and contact information via the <a href="https://docs.google.com/forms/d/e/1FAIpQLScvexaor-JzMJRMdIIoMeO6r1wdklUTAmWTge7pXfR5mBK4AA/viewform?usp=publish-editor" target="_blank">Regional Incentive Pre-registration</a>. Failure to register by the deadline will result in forfeiture of the Regional Incentive.</p>
+                    </div>
+                </div>
+
+                <div class="rule-subsection">
+                    <h4>Step 2: Private Shortlist & Verification Window</h4>
+                    <div class="rule-content">
+                        <p>Upon the conclusion of the competition (July 1, 2026), the Organizing Committee will internally identify potential regional winners based on the Preliminary Kaggle Leaderboard.</p>
+                        
+                        <ul class="step-list">
+                            <li><strong>Private Notification:</strong> Potential winners will be contacted via their registered email to initiate the verification process. This stage is confidential; being contacted does not guarantee a prize.</li>
+                            
+                            <li><strong>72-Hour Response:</strong> Candidates must acknowledge the notice and submit all required identity and technical documents within 72 hours.</li>
+                            
+                            <li><strong>Disqualification & Reassignment:</strong> If a candidate fails to respond, fails the identity audit, or fails the Technical Reproducibility Audit, the committee will privately contact the next eligible participant.</li>
+                            
+                            <li><strong>Official Announcement:</strong> The final verified list of winners will be officially announced only after all audits are completed.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rule-subsection">
+                    <h4>Step 3: Encrypted Audit & Technical Submission</h4>
+                    <div class="rule-content">
+                        <p>Shortlisted candidates must submit the following via an encrypted channel within 72 hours of notification:</p>
+                        
+                        <ul class="step-list">
+                            <li>
+                                <strong>Identification:</strong> A government-issued ID, Student ID, or Utility Bill issued within the last 3 months. Sensitive info like ID numbers, date of birth, or account balances may be masked; only Name and Region/Address must remain visible.
+                            </li>
+                            
+                            <li>
+                                <strong>Technical Package (Reproducibility & Write-up):</strong> A Technical Write-up (PDF/Markdown) detailing the detection logic. Please refer to <a href="https://github.com/onesavielabs/Bastet_Kaggle_Website/blob/main/Write-up-Template.md" target="_blank">this document</a> as an example of the write-up format. By submitting, participants agree that Bastet and GCC reserve the right to publicly publish this Write-up for community transparency.
+                            </li>
+                            
+                            <li>
+                                <strong>Wallet Address:</strong> A valid ERC-20 (Ethereum Mainnet) wallet address. By providing this address, participants confirm that they have sole and exclusive control over the private key. The Organizers will not be liable for any loss resulting from submission of exchange deposit addresses, shared wallets, or compromised keys.
+                            </li>
+                            
+                            <li>
+                                <strong>Disbursement:</strong> Prizes will be sent via the Ethereum network. All transactions will be publicly verifiable on <a href="https://etherscan.io/" target="_blank">Etherscan</a>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- USDT Disbursement Terms Section -->
+            <div class="rule-section">
+                <h3>4. USDT Disbursement Terms</h3>
+                <div class="rule-content">
+                    <ul class="step-list">
+                        <li><strong>Currency:</strong> All regional prizes will be paid in <strong>USDT</strong> via Ethereum Mainnet (ERC‑20).</li>
+                        
+                        <li><strong>Transaction Fees:</strong> Gas fees for the initial transfer will be covered by the organizers.</li>
+                        
+                        <li><strong>Compliance:</strong> Receiving addresses must not be listed on international sanction lists (e.g., OFAC).</li>
+                        
+                        <li><strong>Timeline:</strong> Payments will be processed within 14 business days following the completion of ID verification and Code Review.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Data Privacy Section -->
+            <div class="rule-section">
+                <h3>5. Data Privacy & GDPR Compliance</h3>
+                <div class="rule-content">
+                    <ul class="step-list">
+                        <li><strong>Minimization:</strong> We only collect data necessary to prove regional eligibility. Participants are encouraged to redact non-essential personal identifiers before submission.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Disclaimers & Final Authority Section -->
+            <div class="rule-section">
+                <h3>6. Disclaimers & Final Authority</h3>
+                <div class="rule-content">
+                    <ul class="step-list">
+                        <li>If a top regional participant is disqualified due to cheating (Kaggle violations) or failure to pass the KYC audit, the prize will be awarded to the next eligible participant in the regional ranking.</li>
+                        
+                        <li>Any violation of Kaggle's Terms or failure in the Technical Reproducibility Audit will lead to immediate disqualification.</li>
+                        
+                        <li>Bastet and GCC (Global Chinese Community) reserve the sole and final authority regarding regional eligibility, technical validation, and prize distribution.</li>
+                        
+                        <li>The organizers reserve the right to request additional evidence or void any award if a submission contradicts the spirit of fair competition or Web3 security ethics. All decisions are final and binding.</li>
+                        
+                        <li><span class="disclaimer">Winners are solely responsible for compliance with their local tax laws.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-zh="&copy; 2026 Bastet. All rights reserved." data-en="&copy; 2026 Bastet, All rights reserved.">&copy; 2026 Bastet. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prize Rules - Bastet Kaggle Competition</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "v9bqrgb0ro");
+    </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCT51GGSFN"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KCT51GGSFN');
+        </script>
+    <style>
+        .prize-overview-section {
+            padding: 3rem 0 5rem 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .prize-overview-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .prize-overview-title {
+            font-size: 3.5rem;
+            color: #00ffff;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            text-align: center;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .prize-subtitle {
+            text-align: center;
+            color: #00ff00;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+            font-weight: bold;
+        }
+
+        .sponsor-welcome {
+            text-align: center;
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            line-height: 1.6;
+        }
+
+        .sponsor-cards-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sponsor-card {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            transition: all 0.3s ease;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-gap: 2rem;
+            align-items: center;
+            min-height: auto;
+        }
+
+        .sponsor-card > div:first-child {
+            align-self: start;
+            padding-top: 0;
+        }
+
+        .sponsor-card:hover {
+            border-color: #00ffff;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateX(10px);
+        }
+
+        .sponsor-card h3 {
+            font-size: 1.6rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+            min-height: auto;
+            display: block;
+        }
+
+        .sponsor-scope {
+            font-size: 1rem;
+            color: #00ff00;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        .sponsor-scope-label {
+            color: #00ffff;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .prize-amount-highlight {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            padding: 1rem;
+            border-radius: 5px;
+            color: #00ffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+            width: 100%;
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prize-details {
+            color: #00ff00;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .sponsor-card-content {
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .sponsor-card a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: rgba(0, 255, 0, 0.1);
+            border: 2px solid #00ffff;
+            color: #00ffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-align: center;
+            align-self: center;
+            margin-top: 1rem;
+        }
+
+        .sponsor-card a:hover {
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        section#prizes {
+            padding: 5rem 0;
+            min-height: auto;
+            display: block;
+        }
+
+        .sponsor-contact-btn {
+            display: block;
+            margin: 1.5rem auto 3rem auto;
+            background: linear-gradient(135deg, #9d00ff 0%, #ff006e 100%);
+            color: #ffffff;
+            border: 2px solid #ff006e;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 0, 110, 0.5), 0 0 40px rgba(157, 0, 255, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            width: fit-content;
+        }
+
+        .sponsor-contact-btn:hover {
+            background: linear-gradient(135deg, #ff006e 0%, #9d00ff 100%);
+            border-color: #ff006e;
+            color: #ffffff;
+            box-shadow: 0 0 30px rgba(255, 0, 110, 0.8), 0 0 50px rgba(157, 0, 255, 0.6);
+            text-shadow: 0 0 15px rgba(255, 0, 110, 0.8);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 1024px) {
+            .sponsor-card {
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sponsor-card {
+                grid-template-columns: 1fr;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cat-peek-decoration">
+            <img src="images/cat_peek.png" alt="Bastet Cat">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home" data-zh="首頁" data-en="Home">首頁</a></li>
+                <li><a href="index.html#about" data-zh="關於比賽" data-en="About">關於比賽</a></li>
+                <li><a href="prize-rules.html" data-zh="獎勵規則" data-en="Prize Rules">獎勵規則</a></li>
+                <li><a href="index.html#services" data-zh="賽前準備" data-en="Guide">賽前準備</a></li>
+                <li><a href="index.html#contact" data-zh="聯絡" data-en="Contact">聯絡</a></li>
+            </ul>
+            <button id="langToggle" class="lang-toggle">EN</button>
+        </nav>
+    </header>
+
+    <section id="prizes" class="prize-overview-section">
+        <div class="prize-overview-container">
+            <h1 class="prize-overview-title">PRIZE RULES </h1>
+            <p class="prize-subtitle">Total Prize Pool: Over $7,500 USD</p>
+            <p class="sponsor-welcome">We welcome organizations and sponsors to provide additional awards for outstanding participants.</p>
+            <a href="index.html#contact" class="sponsor-contact-btn">Contact us for more details!</a>
+            <div class="sponsor-cards-grid">
+                <!-- Ethereum Support Program -->
+                <div class="sponsor-card">
+                    <div>
+                        <h3>Ethereum Support Program</h3>
+                        <p class="sponsor-scope">
+                            <span class="sponsor-scope-label">🌍 Global</span>
+                        </p>
+                    </div>
+                    <div class="sponsor-card-content">
+                        <div class="prize-amount-highlight">3,500 DAI</div>
+                    </div>
+                    <a href="prize-rules-esp.html">View Details</a>
+                </div>
+
+                <!-- IEEE CIS Singapore Chapter -->
+                <div class="sponsor-card">
+                    <div>
+                        <h3>IEEE CIS Singapore</h3>
+                        <p class="sponsor-scope">
+                            <span class="sponsor-scope-label">🇸🇬 Singapore</span>
+                        </p>
+                    </div>
+                    <div class="sponsor-card-content">
+                        <div class="prize-amount-highlight">600 SGD</div>
+                    </div>
+                    <a href="prize-rules-ieee.html">View Details</a>
+                </div>
+
+                <!-- GCC -->
+                <div class="sponsor-card">
+                    <div>
+                        <h3>GCC (Global Chinese Community)</h3>
+                        <p class="sponsor-scope">
+                            <span class="sponsor-scope-label">🌏 Mandarin Region</span>
+                        </p>
+                    </div>
+                    <div class="sponsor-card-content">
+                        <div class="prize-amount-highlight">4,000 USDT</div>
+                    </div>
+                    <a href="prize-rules-gcc.html">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-zh="&copy; 2026 Bastet. All rights reserved." data-en="&copy; 2026 Bastet, All rights reserved.">&copy; 2026 Bastet. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
