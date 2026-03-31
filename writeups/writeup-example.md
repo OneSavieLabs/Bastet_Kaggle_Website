@@ -217,4 +217,4 @@ This is an aggressive over-reporting control because the deduplication key does 
 
 ### Detailed Results & Analysis
 
-For a deeper dive into the specific workflow design, performance characteristics, and detailed analysis, please refer to [this article](https://www.notion.so/Slippage-experiment-325ff4621bc280ba83b9c9e27a6146e2?pvs=21).
+For a deeper dive into the specific workflow design, performance characteristics, and detailed analysis, please refer to [this article](https://blog.onesavie.com/design-and-analysis-of-llm-based-smart-contract-auditing-a-slippage-vulnerability-69e5789a2dc7).
