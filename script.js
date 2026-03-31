@@ -23,8 +23,8 @@ function switchLanguage() {
 
 // 倒數計時器
 function updateCountdown() {
-    // 設定目標時間：2026/04/01 00:00:00 UTC+8
-    const targetDate = new Date('2026-04-01T00:00:00+08:00');
+    // 設定目標時間：2026/07/01 00:00:00 UTC+8
+    const targetDate = new Date('2026-07-01T00:00:00+08:00');
     const now = new Date();
     const difference = targetDate - now;
 

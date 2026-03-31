@@ -199,7 +199,7 @@ section:nth-child(even) {
 
 .hero .main-title {
     font-size: 4.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     color: #00ffff;
     text-shadow: 0 0 30px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 0.5);
     letter-spacing: 0.15em;
@@ -208,15 +208,16 @@ section:nth-child(even) {
 }
 
 .hero .subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 2.5rem;
-    color: #00ff00;
-    text-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
-    letter-spacing: 0.05em;
-    max-width: 900px;
+    font-size: 1.2rem;
+    margin-bottom: 3.5rem;
+    color: rgba(0, 255, 0, 0.8);
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.48);
+    letter-spacing: 0.12em;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.6;
+    line-height: 1.8;
+    font-weight: 600;
 }
 
 .hero p {
@@ -224,7 +225,7 @@ section:nth-child(even) {
 }
 
 .countdown-container {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     padding: 3rem;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
@@ -273,6 +274,53 @@ section:nth-child(even) {
     to {
         text-shadow: 0 0 30px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 1);
     }
+}
+
+/* 倒數狀態區域 */
+.countdown-status {
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.live-badge {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    margin: 0;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    white-space: nowrap;
+}
+
+.live-dot {
+    display: inline-block;
+    animation: pulse-red 1s ease-in-out infinite;
+}
+
+@keyframes pulse-red {
+    0%, 100% {
+        color: #ff0000;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    }
+    50% {
+        color: #ff6666;
+        text-shadow: 0 0 20px rgba(255, 0, 0, 1);
+    }
+}
+
+.countdown-label {
+    font-size: 1.2rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    margin: 0;
+    letter-spacing: 0.05em;
 }
 
 .supporter-section {
@@ -1008,6 +1056,7 @@ footer {
     animation: pulse 2s infinite;
     font-family: 'Courier New', Consolas, monospace;
     text-align: center;
+    text-decoration: none;
 }
 
 .notify-trigger-inline:hover {
