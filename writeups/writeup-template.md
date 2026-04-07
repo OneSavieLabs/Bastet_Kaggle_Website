@@ -7,7 +7,7 @@
 ### 1. Title & Team Information
 
 * **Authors:** [List of members]
-* **Submission Link:** [Link to your Kaggle notebook or GitHub repository]
+* **Submission Link:** Submission Link: [Link to your Kaggle notebook or GitHub repository].This field is **required**. Kindly provide runnable code to serve as proof for reproducibility.
 
 
 
